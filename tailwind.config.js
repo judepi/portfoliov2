@@ -7,10 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        "-10": "-10",
+        "-20": "-20",
+        "-30": "-30",
+        // Add more negative z-index values as needed
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

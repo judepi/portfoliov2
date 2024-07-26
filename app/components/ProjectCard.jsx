@@ -1,0 +1,120 @@
+import React from "react";
+import {WindowIcon } from "@heroicons/react/24/outline";
+
+
+const projectsData = [
+  {
+    id: 1,
+    title: "Connect-Tags",
+    description:
+      "A WIP full-stack app developed with React-Native, Flask, and FireBase.",
+    detailedDescription:
+      "Connect-Tags is a group project done by myself and two other members (Casey Mak, and Mohammed Areefin). during the 2024 Wafflehacks hackathon. The project is still WIP. We used react-native to create the front-end so that we can have one simple code-base for all 3 platforms (web, apple, android). We are currently working on the backend with Flask and FireBase, and other features.",
+    image: "/images/projects/Connect-Tags.jpeg",
+    gitUrl: "https://github.com/jpntc/wafflehacks-2024-Connect-Tags",
+    tag: ["All", "Web"],
+    demo: "https://www.youtube.com/embed/3ma1kaWPtUU?si=QlKLmeqpveUyY0Gc",
+    styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
+  },
+  {
+    id: 2,
+    title: "Image Generator",
+    description:
+      "A web app that integrates the DALL-E 3 API to generate images from user input, along with interactive components to adjust the images created to match what is desired in mind.",
+    detailedDescription: "Detailed description here",
+    image: "/images/projects/demo_coming_soon.png",
+    gitUrl: "",
+    tag: ["All", "Web"],
+    demo: "",
+    styles: { backgroundSize: "cover" },
+  },
+  {
+    id: 3,
+    title: "Game Hub",
+    description:
+      "A game browsing web app that uses RAWG's API and filters that gives power to browse hundreds of games.",
+    detailedDescription: "Detailed description here",
+    image: "/images/projects/demo_coming_soon.png",
+    gitUrl: "https://github.com/jpntc/Game-Hub",
+    tag: ["All", "Web"],
+    demo: "",
+    styles: { backgroundSize: "cover" },
+  },
+  {
+    id: 4,
+    title: "Portfolio",
+    description:
+      "A portfolio to show the track record of my journey in programming and software engineering. ",
+    detailedDescription:
+      "A portfolio web application developed with Next.js and Tailwind CSS to share information about myself and my journey. The project leverages the strengths of React and the component-based software engineering approach it offers which is popular in today's web development industry. I Created 6 components for the 6 different page sections, from the Navbar to the Footer and other children components for important functionalities. The libraries I used for the animations are React's Framer Motion, Type-Animation, and Animated Numbers. I attempted a dynamic code approach when necessary for generating site information, to make the codebase small and readable. RESEND was used for sending emails. AWS was used for deployment.",
+    image: "/images/projects/portfolio.png",
+    gitUrl: "https://github.com/jpntc/Portfolio",
+    tag: ["All", "Web"],
+    demo: "",
+    styles: {
+      backgroundSize: "cover",
+    },
+  },
+  {
+    id: 5,
+    title: "Inventory Management System",
+    description:
+      "An inventory system that offers CRUD operations to simulate a real-world system used by commerce businesses.",
+    detailedDescription:
+      "A command-line project for my software engineering class. The project was developed with Java, and uses OOP design principles. For modularity I used an item class to instantiate item objects for various items stored in the database, a storage class that is used to load the system with a data file of items into a hashmap data structure, and abstract away the data structure with CRUD methods. Finally there is a main program which takes in CRUD requests from the terminal, processes them, and logs all the transactions processed.",
+    image: "/images/projects/demo_coming_soon.png",
+    gitUrl:
+      "https://github.com/jpntc/CSCI-370-Projects/tree/main/Inventory%20Management%20Simulation",
+    tag: ["All", "CL"],
+    demo: "",
+    styles: { backgroundSize: "cover" },
+  },
+  {
+    id: 6,
+    title: "URL Parser",
+    description:
+      "A URL parsing program that takes in URLs that point to different web pages and extracts the information they contain.",
+    detailedDescription:
+      "A command-line project for my software engineering class. The project was created in Java from a UML system diagram. It uses OOP principles such as modularization and abstraction, with 3 classes for handling plain html pages, image URLs, and URLs that point to pdf/docx files. It uses a WebReader class to handle branching and functionality for each type of URL. Finally it uses a WebReaderApplication class which is used to handle flags passed from the command-line. The content extracted from the URLs are stored in a separate folder. The information regarding the content such as file size and type are stored in an output file. Major packages used were Java's Abstract Window Toolkit, and .net package",
+    image: "/images/projects/demo_coming_soon.png",
+    gitUrl: "https://github.com/jpntc/CSCI-370-Projects/tree/main/URL_Parser",
+    tag: ["All", "CL"],
+    demo: "",
+    styles: { backgroundSize: "cover" },
+  },
+];
+
+const ProjectCard = ({ imgUrl, title, description, onClick, styles}) => {
+  return (
+    <div className="">
+      <div
+        className={`h-52 relative group overflow-hidden rounded-t-xl`}
+        style={{...styles}}
+      >
+        <div className="w-full h-full"
+          style={{
+            backgroundImage: `url(${imgUrl})`,
+            backgroundSize: `${styles.backgroundSize}`,
+            backgroundPosition: "center",
+          }}
+        />
+        <div className="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 items-center justify-center ">
+          <WindowIcon
+            className="h-10 w-10 text-quaternary-dark cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2  hover:text-slate-100"
+            onClick={onClick}
+          />
+        </div>
+      </div>
+      <div className="min-h-56 md:min-h-60 flex flex-col rounded-b-xl bg-slate-700 py-6 px-4">
+        <h5 className="text-slate-100 text-xl xl:text-2xl font-bold mb-2 flex-grow ">
+          {title}
+        </h5>
+        <p className="text-white flex-grow">{description}</p>
+      </div>
+    </div>
+  );
+};
+export default ProjectCard;
+
+
+
