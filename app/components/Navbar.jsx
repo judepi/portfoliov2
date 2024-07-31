@@ -2,7 +2,18 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+} from "@nextui-org/react";
+import { Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 const navItems = [
   { value: "About", link: "#about" },
   { value: "Education", link: "#education" },
@@ -11,9 +22,14 @@ const navItems = [
   { value: "Misc", link: "#misc" },
 ];
 
-const Navbar = () => {
+
+
+
+
+const NavBar = () => {
   const [activeSection, setActiveSection] = useState("");
 
+  const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -36,33 +52,72 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.nav className="fixed top-0 m-0 p-0 bg-gray-800 w-full z-50 opacity-90 flex ">
-      <Image
-        src="/images/logo.png"
-        width={90}
-        height={90}
-        alt={"logo"}
-        className="p-2 rounded-full"
-        id="nav"
-      />
-      <div className="w-full flex justify-end mx-4">
-        <ul className="flex justify-evenly items-center text-center">
-          {navItems.map((item, index) => (
-            <li
-              key={index}
-              className={`inline-block text-white text-center border border-red-200 hover:text-red-200 font-bold hover:bg-green-200 text-xl p-2 ${
+    <Navbar
+      className="fixed top-0 left-0 bg-gray-600 w-full  z-30 opacity-90"
+      position={"static"}
+      isBlurred={true}
+      isMenuOpen={menuOpen}
+      onMenuOpenChange={() => {
+        setMenuOpen(!menuOpen);
+      }}
+    >
+      <NavbarContent className=" pr-3" justify="start">
+        <NavbarBrand className="mr-4">
+          <Image
+            src="/images/logo.png"
+            width={90}
+            height={90}
+            alt={"logo"}
+            className="p-2 rounded-full"
+          />
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle
+          className=""
+          srOnlyText=" "
+          icon={
+            menuOpen ? (
+              <XMarkIcon className="h-10 " />
+            ) : (
+              <Bars3Icon className="h-10 " />
+            )
+          }
+        />
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        {navItems.map((item, index) => (
+          <NavbarItem key={index}>
+            <Link
+              className={`w-full  ${
                 activeSection === item.link.substring(1)
                   ? "bg-green-200 text-red-200"
-                  : "text-white bg-inherit"
-              }`}
+                  : ""
+              } `}
+              href={item.link}
+              size="lg"
             >
-              <a href={item.link}>{item.value}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </motion.nav>
+              {item.value}
+            </Link>
+          </NavbarItem>
+        ))}
+      </NavbarContent>
+
+      <NavbarMenu className="fixed top-20 right-0 bg-gray-600 max-h-64 w-64  flex items-end"
+      >
+        {menuOpen ? (navItems.map((item, index) => (
+          <NavbarMenuItem key={index}>
+            <Link className="text-green-500 text-2xl font-bold m-3" href={item.link} size="lg">
+              {item.value}
+            </Link>
+          </NavbarMenuItem>
+        ))) : <></>}
+      </NavbarMenu>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavBar;
+
+

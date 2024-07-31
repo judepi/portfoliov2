@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/Navbar";
 import HeroParallax from "./components/HeroParallax";
 import AboutSection from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col justify-between">
-        <Navbar/>
-        <HeroParallax/>
+        <NavBar/>
+        {/* <HeroParallax/> */}
         <div className="flex flex-col min-h-screen min-w-full px-10 md:px-20 mt-10 overflow-hidden">
           <AboutSection/>
           <EducationSection/>
