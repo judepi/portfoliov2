@@ -5,6 +5,9 @@ import Image from "next/image";
 import { TabButton } from "./TabButton";
 import ProjectCard from "./ProjectCard";
 import ProjectPopUp from "./ProjectPopUp";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const projectsData = [
   {
@@ -94,49 +97,74 @@ const ProjectSection = () => {
   const [isPending, startTransition] = useTransition();
   const isInView = useInView(ref, { once: true });
 
+  const { scrollY } = useScroll();
+  const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
+
+
   const handleTabChange = (id) => {
     startTransition(() => {
       setTab(id);
     });
   };
   return (
-    <section ref={ref} id="projects" className="min-h-screen flex-col">
+    <motion.section
+      ref={ref}
+      id="projects"
+      className="min-h-screen flex-col"
+      style={{ scale }}
+    >
       <p className="font-bold text-center text-4xl md:text-5xl mb-16">
         Projects
       </p>
-      <div className="w-full justify-start">
-        <div className="flex justify-center bg-black opacity-60 text-center p-2 rounded-md">
-          <TabButton
-            selectTab={() => handleTabChange("web")}
-            active={tab === "web"}
-          >
-            Web Apps
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("cp")}
-            active={tab === "cp"}
-          >
-            Cross-Platform
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("cli")}
-            active={tab === "cli"}
-          >
-            Command Line Programs
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("mob")}
-            active={tab === "mob"}
-          >
-            Mobile Apps
-          </TabButton>
+      <div className="flex flex-col w-full justify-center items-center content-center">
+          <div className="bg-black opacity-60 text-center p-2 rounded-md">
+            <TabButton
+              selectTab={() => handleTabChange("web")}
+              active={tab === "web"}
+            >
+              Web Apps
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("cp")}
+              active={tab === "cp"}
+            >
+              Cross-Platform
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("cli")}
+              active={tab === "cli"}
+            >
+              Command Line Programs
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("mob")}
+              active={tab === "mob"}
+            >
+              Mobile Apps
+            </TabButton>
         </div>
-        <div className="flex w-full justify-center items-center ">
-          <ul className="h-96 grid grid-cols-2 space-x-4  mt-8 overflow-x-auto">
+        <ul className="hidden md:visible md:flex flex-col mt-10 border w-ffull">
+          {projectsData.map(
+            (project, index) =>
+              project.tag.includes(tab) && (
+                <li key={index} className="h-fit p-8 w-fit">
+                  <ProjectCard
+                    imgUrl={project.image}
+                    title={project.title}
+                    description={project.description}
+                    onClick={() => console.log("clicked")}
+                    styles={project.styles}
+                  />
+                </li>
+              )
+          )}
+        </ul>
+        <div className="md:hidden">
+          <Slider className="">
             {projectsData.map(
               (project, index) =>
                 project.tag.includes(tab) && (
-                  <li key={index} className="w-96  h-fit">
+                  <div key={index} className="w-96  h-fit">
                     <ProjectCard
                       imgUrl={project.image}
                       title={project.title}
@@ -144,13 +172,13 @@ const ProjectSection = () => {
                       onClick={() => console.log("clicked")}
                       styles={project.styles}
                     />
-                  </li>
+                  </div>
                 )
             )}
-          </ul>
+          </Slider>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

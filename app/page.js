@@ -9,15 +9,16 @@ import MiscSection from "./components/MiscSection";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col justify-between">
-        <NavBar/>
-        {/* <HeroParallax/> */}
-        <div className="flex flex-col min-h-screen min-w-full px-10 md:px-20 mt-10 overflow-hidden">
-          <AboutSection/>
-          <EducationSection/>
-          <ProjectSection/>
-          <ExperienceSection/>
-          <MiscSection/>
+      <main className="flex flex-col justify-between bg-gray-800">
+        <NavBar />
+
+        <HeroParallax />
+        <div className="flex flex-col min-h-screen min-w-full px-20 md:px-36 mt-10 overflow-hidden">
+          <AboutSection />
+          <EducationSection />
+          <ProjectSection />
+          <ExperienceSection />
+          <MiscSection />
         </div>
       </main>
     </>

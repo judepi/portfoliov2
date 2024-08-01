@@ -53,13 +53,14 @@ const NavBar = () => {
 
   return (
     <Navbar
-      className="fixed top-0 left-0 bg-gray-600 w-full  z-30 opacity-90"
+      className="fixed bottom-50 bg-gray-800 w-full  z-30 opacity-90 border border-b"
       position={"static"}
       isBlurred={true}
       isMenuOpen={menuOpen}
       onMenuOpenChange={() => {
         setMenuOpen(!menuOpen);
       }}
+  
     >
       <NavbarContent className=" pr-3" justify="start">
         <NavbarBrand className="mr-4">

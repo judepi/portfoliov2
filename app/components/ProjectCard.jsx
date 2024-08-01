@@ -86,12 +86,12 @@ const projectsData = [
 
 const ProjectCard = ({ imgUrl, title, description, onClick, styles}) => {
   return (
-    <div className="">
+    <div className="border">
       <div
-        className={`h-52 relative group overflow-hidden rounded-t-xl`}
+        className={`h-52 w-64 relative group overflow-hidden rounded-t-xl flex flex-col`}
         style={{...styles}}
       >
-        <div className="w-full h-full"
+        <div className=""
           style={{
             backgroundImage: `url(${imgUrl})`,
             backgroundSize: `${styles.backgroundSize}`,
@@ -105,7 +105,7 @@ const ProjectCard = ({ imgUrl, title, description, onClick, styles}) => {
           />
         </div>
       </div>
-      <div className="min-h-56 md:min-h-60 flex flex-col rounded-b-xl bg-slate-700 py-6 px-4">
+      <div className="flex flex-col rounded-b-xl bg-slate-700 py-6 px-4">
         <h5 className="text-slate-100 text-xl xl:text-2xl font-bold mb-2 flex-grow ">
           {title}
         </h5>
