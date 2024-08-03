@@ -32,7 +32,7 @@ const socials = [
 
 const Navbar = () => {
   return (
-    <section className="flex flex-col justify-evenly lg:min-h-screen mb-16 lg:mb-0 border p-10  lg:px-28  border-red-300">
+    <section className="sticky top-0 left-0 lg:min-h-screen lg:w-3/4 mb-16 lg:mb-0 lg:ml-10">
       <div className="flex flex-col justify-evenly">
         <div className="flex flex-col mb-4">
           <p className="text-xl md:text-2xl lg:text-4xl font-extrabold">
@@ -56,7 +56,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div className="w-fit">
+      <div className="w-fit h-fit flex flex-col border border-orange-800 ">
         <ul className="flex justify-evenly">
           {socials.map((item, index) => (
             <Link key={index} href={item.href} target="_blank">
