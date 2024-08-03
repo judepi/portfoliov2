@@ -1,7 +1,11 @@
 import React from 'react'
+import About from "./About"
+
 
 const Body = () => {
-  return <div className="border md:min-h-screen mb-10 md:mb-0 border-red-300 ">Body</div>;
+  return <div className="border md:min-h-screen  border-red-300 ">
+    <About/>
+  </div>;
 }
 
 export default Body

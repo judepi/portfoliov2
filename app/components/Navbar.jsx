@@ -15,15 +15,18 @@ const navItems = [
 const socials = [
   {
     alt: "Github",
-    link: "/images/socials/github-1.png",
+    link: "/socials/github-1.png",
+    href: "https://github.com/jpntc",
   },
   {
     alt: "linkedin",
-    link: "/images/socials/linkedin.png",
+    link: "/socials/linkedin.png",
+    href: "https://www.linkedin.com/in/jude-pierre ",
   },
   {
     alt: "Youtube",
-    link: "/images/socials/Youtube.png",
+    link: "/socials/Youtube.png",
+    href: "https://www.youtube.com/channel/UCEEc1WDQhT0AMrJtjvr96ZA",
   },
 ];
 
@@ -53,10 +56,18 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div className="flex justify-evenly">
-        <ul>
+      <div className="w-fit">
+        <ul className="flex justify-evenly">
           {socials.map((item, index) => (
-            <Image src={`"${item.link}"`} alt={`"${item.alt}"`} key={index} width={100} height={100}/>
+            <Link key={index} href={item.href} target="_blank">
+              <Image
+                src={`${item.link}`}
+                alt={`${item.alt}`}
+                width={40}
+                height={40}
+                className="mr-2"
+              />
+            </Link>
           ))}
         </ul>
       </div>
