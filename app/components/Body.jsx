@@ -4,9 +4,10 @@ import Education from "./Education"
 
 const Body = () => {
   return (
-    <section className="lg:w-3/4 lg:min-h-screen  flex flex-col ">
+    <section className="lg:w-3/4 min-h-screen">
       <About />
       <Education />
+ 
     </section>
   );
 }
