@@ -15,24 +15,24 @@ const navItems = [
 const socials = [
   {
     alt: "Github",
-    link: "/socials/github-1.png",
+    link: "/images/socials/github-1.png",
     href: "https://github.com/jpntc",
   },
   {
     alt: "linkedin",
-    link: "/socials/linkedin.png",
+    link: "/images/socials/linkedin.png",
     href: "https://www.linkedin.com/in/jude-pierre ",
   },
   {
     alt: "Youtube",
-    link: "/socials/Youtube.png",
+    link: "/images/socials/Youtube.png",
     href: "https://www.youtube.com/channel/UCEEc1WDQhT0AMrJtjvr96ZA",
   },
 ];
 
 const Navbar = () => {
   return (
-    <section className="lg:min-h-screen lg:w-full mb-16 lg:mb-0 lg:ml-1">
+    <section className="lg:min-h-screen lg:w-full mb-16 lg:mb-0 lg:ml-20">
       <div className="lg:fixed lg:w-1/4 lg:min-h-screen ">
         <div className="flex flex-col justify-between">
           <div className="flex flex-col mb-4">

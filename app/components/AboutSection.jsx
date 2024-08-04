@@ -2,9 +2,9 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="flex flex-col " id="#about">
+    <section className="flex flex-col " id="about">
       <div className="lg:hidden border border-b-black " />
-      <div className="block">
+      <div className="">
         <p className="">
           I have a passion and curiosity for learning new technologies, and
           understanding how different software systems are designed. I am

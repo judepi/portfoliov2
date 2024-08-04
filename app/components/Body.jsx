@@ -1,13 +1,13 @@
 import React from 'react'
-import About from "./About"
-import Education from "./Education"
-
+import AboutSection from "./AboutSection"
+import EducationSection from "./EducationSection"
+import ProjectSection from './ProjectSection'
 const Body = () => {
   return (
-    <section className="lg:w-3/4 min-h-screen">
-      <About />
-      <Education />
- 
+    <section className="lg:w-3/4 min-h-screen  flex flex-col ">
+      <AboutSection />
+      <EducationSection />
+      <ProjectSection/>
     </section>
   );
 }
