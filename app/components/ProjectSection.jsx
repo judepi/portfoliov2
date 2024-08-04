@@ -1,9 +1,25 @@
 "use client"
 import React from 'react'
 import ProjectCard from "./ProjectCard"
+
 const projectsData = [
   {
     id: 1,
+    title: "Connect-Tags",
+    description:
+      "A WIP full-stack app developed with React-Native, Flask, and FireBase.",
+    detailedDescription:
+      "Connect-Tags is a group project done by myself and two other members (Casey Mak, and Mohammed Areefin). during the 2024 Wafflehacks hackathon. The project is still WIP. We used react-native to create the front-end so that we can have one simple code-base for all 3 platforms (web, apple, android). We are currently working on the backend with Flask and FireBase, and other features.",
+    image: "/images/projects/Connect-Tags.jpeg",
+    gitUrl: "https://github.com/jpntc/wafflehacks-2024-Connect-Tags",
+    tag: ["All", "Web"],
+    demo: "https://www.youtube.com/embed/3ma1kaWPtUU?si=QlKLmeqpveUyY0Gc",
+    skills: ["Node.js", "Next.js", "AWS Amplify", "REST APIs"],
+    liveUrl: "",
+    styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
+  },
+  {
+    id: 2,
     title: "Image Generator",
     description:
       "A web app that integrates the DALL-E 3 API to generate images from user input, along with interactive components to adjust the images created to match what is desired in mind.",
@@ -13,10 +29,11 @@ const projectsData = [
     tag: ["All", "Web"],
     demo: "",
     skills: ["Node.js", "Next.js", "AWS Amplify", "APIs"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 2,
+    id: 3,
     title: "Game Hub",
     description:
       "A game browsing web app that uses RAWG's API and filters that gives power to browse hundreds of games.",
@@ -26,10 +43,11 @@ const projectsData = [
     tag: ["All", "Web"],
     demo: "",
     skills: ["Node.js", "React.js", "APIs"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 3,
+    id: 4,
     title: "Portfolio",
     description:
       "A portfolio to show the track record of my journey in programming and software engineering. ",
@@ -40,12 +58,13 @@ const projectsData = [
     tag: ["All", "Web"],
     demo: "",
     skills: ["Node.js", "Next.js", "AWS Amplify", "APIs"],
+    liveUrl: "",
     styles: {
       backgroundSize: "cover",
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Inventory Management System",
     description:
       "An inventory system that offers CRUD operations to simulate a real-world system used by commerce businesses.",
@@ -57,10 +76,11 @@ const projectsData = [
     tag: ["All", "CL"],
     demo: "",
     skills: ["Java", "OOP", "System Designing"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 5,
+    id: 6,
     title: "URL Parser",
     description:
       "A URL parsing program that takes in URLs that point to different web pages and extracts the information they contain.",
@@ -71,10 +91,10 @@ const projectsData = [
     tag: ["All", "CL"],
     demo: "",
     skills: ["Java", "OOP", "System Designing"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
 ];
-
 const ProjectSection = () => {
   return (
     <section className="mt-10 lg:mt-24 min-h-screen">
@@ -83,7 +103,7 @@ const ProjectSection = () => {
         <ul className="flex flex-col w-full">
             {
                 projectsData.map((project, index)=>(
-                <ProjectCard key={index} title={project.title} image={project.image} description={project.description} skills={project.skills}/>
+                <ProjectCard project={project}/>
                 ))
             }
     
