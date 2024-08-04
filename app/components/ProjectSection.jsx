@@ -1,10 +1,6 @@
-"use client";
-import React, { useRef, useState, useTransition } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import Image from "next/image";
-import { TabButton } from "./TabButton";
-import ProjectCard from "./ProjectCard";
-import ProjectPopUp from "./ProjectPopUp";
+"use client"
+import React from 'react'
+import ProjectCard from "./ProjectCard"
 
 const projectsData = [
   {
@@ -16,8 +12,10 @@ const projectsData = [
       "Connect-Tags is a group project done by myself and two other members (Casey Mak, and Mohammed Areefin). during the 2024 Wafflehacks hackathon. The project is still WIP. We used react-native to create the front-end so that we can have one simple code-base for all 3 platforms (web, apple, android). We are currently working on the backend with Flask and FireBase, and other features.",
     image: "/images/projects/Connect-Tags.jpeg",
     gitUrl: "https://github.com/jpntc/wafflehacks-2024-Connect-Tags",
-    tag: ["All", "cp"],
+    tag: ["All", "Web"],
     demo: "https://www.youtube.com/embed/3ma1kaWPtUU?si=QlKLmeqpveUyY0Gc",
+    skills: ["Node.js", "Next.js", "AWS Amplify", "REST APIs"],
+    liveUrl: "",
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
@@ -28,8 +26,10 @@ const projectsData = [
     detailedDescription: "Detailed description here",
     image: "/images/projects/demo_coming_soon.png",
     gitUrl: "",
-    tag: ["All", "web"],
+    tag: ["All", "Web"],
     demo: "",
+    skills: ["Node.js", "Next.js", "AWS Amplify", "APIs"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
@@ -40,8 +40,10 @@ const projectsData = [
     detailedDescription: "Detailed description here",
     image: "/images/projects/demo_coming_soon.png",
     gitUrl: "https://github.com/jpntc/Game-Hub",
-    tag: ["All", "web"],
+    tag: ["All", "Web"],
     demo: "",
+    skills: ["Node.js", "React.js", "APIs"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
@@ -53,8 +55,10 @@ const projectsData = [
       "A portfolio web application developed with Next.js and Tailwind CSS to share information about myself and my journey. The project leverages the strengths of React and the component-based software engineering approach it offers which is popular in today's web development industry. I Created 6 components for the 6 different page sections, from the Navbar to the Footer and other children components for important functionalities. The libraries I used for the animations are React's Framer Motion, Type-Animation, and Animated Numbers. I attempted a dynamic code approach when necessary for generating site information, to make the codebase small and readable. RESEND was used for sending emails. AWS was used for deployment.",
     image: "/images/projects/portfolio.png",
     gitUrl: "https://github.com/jpntc/Portfolio",
-    tag: ["All", "web"],
+    tag: ["All", "Web"],
     demo: "",
+    skills: ["Node.js", "Next.js", "AWS Amplify", "APIs"],
+    liveUrl: "",
     styles: {
       backgroundSize: "cover",
     },
@@ -69,8 +73,10 @@ const projectsData = [
     image: "/images/projects/demo_coming_soon.png",
     gitUrl:
       "https://github.com/jpntc/CSCI-370-Projects/tree/main/Inventory%20Management%20Simulation",
-    tag: ["All", "cli"],
+    tag: ["All", "CL"],
     demo: "",
+    skills: ["Java", "OOP", "System Designing"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
@@ -82,76 +88,29 @@ const projectsData = [
       "A command-line project for my software engineering class. The project was created in Java from a UML system diagram. It uses OOP principles such as modularization and abstraction, with 3 classes for handling plain html pages, image URLs, and URLs that point to pdf/docx files. It uses a WebReader class to handle branching and functionality for each type of URL. Finally it uses a WebReaderApplication class which is used to handle flags passed from the command-line. The content extracted from the URLs are stored in a separate folder. The information regarding the content such as file size and type are stored in an output file. Major packages used were Java's Abstract Window Toolkit, and .net package",
     image: "/images/projects/demo_coming_soon.png",
     gitUrl: "https://github.com/jpntc/CSCI-370-Projects/tree/main/URL_Parser",
-    tag: ["All", "cli"],
+    tag: ["All", "CL"],
     demo: "",
+    skills: ["Java", "OOP", "System Designing"],
+    liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
 ];
-
 const ProjectSection = () => {
-  const ref = useRef(null);
-  const [tab, setTab] = useState("Web");
-  const [isPending, startTransition] = useTransition();
-  const isInView = useInView(ref, { once: true });
-
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
   return (
-    <section ref={ref} id="projects" className="min-h-screen flex-col">
-      <p className="font-bold text-center text-4xl md:text-5xl mb-16">
-        Projects
-      </p>
-      <div className="w-full justify-start">
-        <div className="flex justify-center bg-black opacity-60 text-center p-2 rounded-md">
-          <TabButton
-            selectTab={() => handleTabChange("web")}
-            active={tab === "web"}
-          >
-            Web Apps
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("cp")}
-            active={tab === "cp"}
-          >
-            Cross-Platform
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("cli")}
-            active={tab === "cli"}
-          >
-            Command Line Programs
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("mob")}
-            active={tab === "mob"}
-          >
-            Mobile Apps
-          </TabButton>
-        </div>
-        <div className="flex w-full justify-center items-center ">
-          <ul className="h-96 grid grid-cols-2 space-x-4  mt-8 overflow-x-auto">
-            {projectsData.map(
-              (project, index) =>
-                project.tag.includes(tab) && (
-                  <li key={index} className="w-96  h-fit">
-                    <ProjectCard
-                      imgUrl={project.image}
-                      title={project.title}
-                      description={project.description}
-                      onClick={() => console.log("clicked")}
-                      styles={project.styles}
-                    />
-                  </li>
-                )
-            )}
-          </ul>
-        </div>
+    <section className="mt-10 lg:mt-24 min-h-screen">
+      <div className="lg:hidden border border-b-black" />
+      <div className="w-full">
+        <ul className="flex flex-col w-full">
+            {
+                projectsData.map((project, index)=>(
+                <ProjectCard project={project}/>
+                ))
+            }
+    
+        </ul>
       </div>
     </section>
   );
-};
+}
 
-export default ProjectSection;
+export default ProjectSection

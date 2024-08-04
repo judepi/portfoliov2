@@ -1,19 +1,8 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-} from "@nextui-org/react";
-import { Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+"use client"
+import React from 'react'
+import Link from "next/link"
+import Image from "next/image"
+
 const navItems = [
   { value: "About", link: "#about" },
   { value: "Education", link: "#education" },
@@ -22,102 +11,69 @@ const navItems = [
   { value: "Misc", link: "#misc" },
 ];
 
+const socials = [
+  {
+    alt: "Github",
+    link: "/images/socials/github-1.png",
+    href: "https://github.com/jpntc",
+  },
+  {
+    alt: "linkedin",
+    link: "/images/socials/linkedin.png",
+    href: "https://www.linkedin.com/in/jude-pierre ",
+  },
+  {
+    alt: "Youtube",
+    link: "/images/socials/Youtube.png",
+    href: "https://www.youtube.com/channel/UCEEc1WDQhT0AMrJtjvr96ZA",
+  },
+];
 
-
-
-
-const NavBar = () => {
-  const [activeSection, setActiveSection] = useState("");
-
-  const [menuOpen, setMenuOpen] = useState(false)
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      const scrollPosition = window.scrollY;
-
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (
-          scrollPosition >= sectionTop - sectionHeight / 3 &&
-          scrollPosition < sectionTop + sectionHeight - sectionHeight / 3
-        ) {
-          setActiveSection(section.id);
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+const Navbar = () => {
   return (
-    <Navbar
-      className="fixed top-0 left-0 bg-gray-600 w-full  z-30 opacity-90"
-      position={"static"}
-      isBlurred={true}
-      isMenuOpen={menuOpen}
-      onMenuOpenChange={() => {
-        setMenuOpen(!menuOpen);
-      }}
-    >
-      <NavbarContent className=" pr-3" justify="start">
-        <NavbarBrand className="mr-4">
-          <Image
-            src="/images/logo.png"
-            width={90}
-            height={90}
-            alt={"logo"}
-            className="p-2 rounded-full"
-          />
-        </NavbarBrand>
-      </NavbarContent>
-      <NavbarContent className="sm:hidden" justify="end">
-        <NavbarMenuToggle
-          className=""
-          srOnlyText=" "
-          icon={
-            menuOpen ? (
-              <XMarkIcon className="h-10 " />
-            ) : (
-              <Bars3Icon className="h-10 " />
-            )
-          }
-        />
-      </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {navItems.map((item, index) => (
-          <NavbarItem key={index}>
-            <Link
-              className={`w-full  ${
-                activeSection === item.link.substring(1)
-                  ? "bg-green-200 text-red-200"
-                  : ""
-              } `}
-              href={item.link}
-              size="lg"
-            >
-              {item.value}
-            </Link>
-          </NavbarItem>
-        ))}
-      </NavbarContent>
-
-      <NavbarMenu className="fixed top-20 right-0 bg-gray-600 max-h-64 w-64  flex items-end"
-      >
-        {menuOpen ? (navItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
-            <Link className="text-green-500 text-2xl font-bold m-3" href={item.link} size="lg">
-              {item.value}
-            </Link>
-          </NavbarMenuItem>
-        ))) : <></>}
-      </NavbarMenu>
-    </Navbar>
+    <section className="lg:min-h-screen lg:w-full mb-16 lg:mb-0 lg:ml-20">
+      <div className="lg:fixed lg:w-1/4 lg:min-h-screen ">
+        <div className="flex flex-col justify-between">
+          <div className="flex flex-col mb-4">
+            <p className="text-xl md:text-2xl lg:text-4xl font-extrabold">
+              Jude Pierre
+            </p>
+            <p className="text-base md:text-xl font-extrabold">
+              Computer Science Student, & Aspiring Engineer
+            </p>
+          </div>
+          <p>
+           Interested in software engineering, system designing and the latest tech trends. My goal is to
+            become a software engineer by 2024
+          </p>
+        </div>
+        <div className="hidden lg:flex mt-10 mb-28">
+          <ul className="flex flex-col">
+            {navItems.map((item, index) => (
+              <Link className="text-lg font-bold" key={index} href={item.link}>
+                {item.value}
+              </Link>
+            ))}
+          </ul>
+        </div>
+        <div className="">
+          <ul className="flex justify-start">
+            {socials.map((item, index) => (
+              <Link key={index} href={item.href} target="_blank">
+                <Image
+                  src={`${item.link}`}
+                  alt={`${item.alt}`}
+                  width={40}
+                  height={40}
+                  className="mr-2"
+                />
+              </Link>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
   );
-};
+}
 
-export default NavBar;
-
-
+export default Navbar

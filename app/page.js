@@ -1,25 +1,13 @@
 import Image from "next/image";
-import NavBar from "./components/Navbar";
-import HeroParallax from "./components/HeroParallax";
-import AboutSection from "./components/AboutSection";
-import ExperienceSection from "./components/ExperienceSection";
-import EducationSection from "./components/EducationSection";
-import ProjectSection from "./components/ProjectSection";
-import MiscSection from "./components/MiscSection";
+import Navbar from "./components/Navbar";
+import Body from "./components/Body"
 export default function Home() {
   return (
-    <>
-      <main className="flex flex-col justify-between">
-        <NavBar/>
-        {/* <HeroParallax/> */}
-        <div className="flex flex-col min-h-screen min-w-full px-10 md:px-20 mt-10 overflow-hidden">
-          <AboutSection/>
-          <EducationSection/>
-          <ProjectSection/>
-          <ExperienceSection/>
-          <MiscSection/>
-        </div>
+    <div className="min-h-screen grid lg:grid-cols-2 bg-[#e2e2e2] p-10  lg:py-24 overflow-hidden">
+      <Navbar />
+      <main>
+        <Body />
       </main>
-    </>
+    </div>
   );
 }
