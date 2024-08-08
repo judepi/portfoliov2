@@ -48,7 +48,7 @@ const MiscSection = () => {
         <Button className="flex bg-slate-700 p-2 rounded-md hover:opacity-60 text-center content-center items-center">
           <Link
             className="hover:text-yellow-600"
-            href="https://drive.google.com/file/d/1gOd0jqSXTKOVg1yK7t1N9MGnOl1BgkcS/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1gOd0jqSXTKOVg1yK7t1N9MGnOl1BgkcS/view?usp=sharing"
             target="_blank"
           >
             Download Resume{" "}
