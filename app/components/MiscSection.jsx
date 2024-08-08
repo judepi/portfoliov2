@@ -26,7 +26,7 @@ const MiscSection = () => {
       </div>
       <div className="mt-8 ">
         <div className="text-lg font-bold">Soft Skills</div>
-        <ul className="mt-8 flex">
+        <ul className=" flex">
           {softSkills.map((skill, index) => (
             <li
               className="text-yellow-600  bg-black rounded-xl p-0.5   inline-block font-bold m-0.5 text-center items-center content-center"
