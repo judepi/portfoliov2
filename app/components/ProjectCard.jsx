@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
         width={130}
         height={100}
         alt="project image"
-        className=" ml-4 md:ml-0 h-fit"
+        className=" ml-4 md:ml-0 "
       />
 
       <div className="ml-4 flex flex-col">
@@ -20,20 +20,20 @@ const ProjectCard = ({ project }) => {
           <p className="text-base lg:text-lg mb-2 mr-2 font-bold">
             {project.title}
           </p>
-          <div className="flex border border-l-red-300">
+          <div className="flex">
             {project.gitUrl && (
-              <Link href={project.gitUrl} target="_blank" className="mr-2">
+              <Link href={project.gitUrl} target="_blank" className="mr-2 ">
                 <Image
                   src="/images/projects/github.png"
                   alt="github icon on the project cards"
                   width={30}
                   height={30}
-                  className="w-fit"
+                  className="w-fit "
                 />
               </Link>
             )}
             {project.gitUrl && (
-              <Link href={project.liveUrl} target="_blank" className="mr-2">
+              <Link href={project.liveUrl} target="_blank" className="mr-2 flex">
                 <ArrowUpRightIcon className="h-6" />
               </Link>
             )}
