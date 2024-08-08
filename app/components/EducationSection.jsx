@@ -13,7 +13,7 @@ const Education = () => {
           multiple classes that thought theoretical and practical courses in the
           field of computer science. I learnt web development mainly outside of
           class, and know enough to build full-stack applications. Some
-          certificates I've earned online include:
+          certificates I have earned online include:
         </p>
         <div className="">TAB BUTTON TO DISPLAY COURSES HERE.</div>
       </div>
