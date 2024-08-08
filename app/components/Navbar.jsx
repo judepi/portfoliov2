@@ -44,20 +44,20 @@ const Navbar = () => {
           </div>
           <div className="flex flex-row w-full text-pretty justify-center items-center">
             <p className="">
-              Interested in software engineering, system designing and the
-              latest tech trends. My goal is to become a software engineer by
-              2024
+              Interested in software engineering, system designing and the latest tech trends.
+              {/* latest tech trends. My goal is to become a software engineer by
+              2024 */}
             </p>
               <Image
                 src="/images/pp.png"
                 width={180}
                 height={180}
                 alt="user profile picture"
-                className="rounded-xl border-green-200 w-fit p-2 "
+                className="rounded-xl border-green-200 w-fit"
               />
           </div>
         </div>
-        <div className="hidden lg:flex mt-10 mb-28">
+        <div className="hidden lg:flex mt-4 mb-28">
           <ul className="flex flex-col">
             {navItems.map((item, index) => (
               <Link className="text-lg font-bold" key={index} href={item.link}>

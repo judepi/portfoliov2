@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <section className="flex flex-col mt-10 lg:mt-0" id="about">
-      <div className=" sticky border font-bold text-base md:text-xl text-center">About</div>
+      <div className=" sticky font-bold text-base md:text-xl text-center">About</div>
       <div className="">
         <p className="">
           I have a passion and curiosity for learning new technologies, and

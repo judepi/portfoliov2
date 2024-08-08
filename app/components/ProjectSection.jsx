@@ -98,8 +98,8 @@ const projectsData = [
 ];
 const ProjectSection = () => {
   return (
-    <section className="mt-10 lg:mt-24 min-h-screen">
-      <div className=" sticky border font-bold text-base md:text-xl text-center">
+    <section className="mt-10 lg:mt-24 min-h-screen" id="projects">
+      <div className=" sticky font-bold text-base md:text-xl text-center">
         Projects
       </div>
 
@@ -107,17 +107,17 @@ const ProjectSection = () => {
       <div className="w-full">
         <ul className="flex flex-col w-full">
           {projectsData.map((project, index) => (
-            <ProjectCard project={project} />
+            <ProjectCard key={index} project={project} />
           ))}
         </ul>
       </div>
       <div className="flex justify-center mt-8 rounded-md">
         <Link href="/projects/" target="_blank">
-          <div className="w-fit flex flex-row  p-4 items-center bg-gray-100 rounded-md">
-            <p on hover>
+          <div className="w-fit flex flex-row  p-4 items-end bg-slate-800 rounded-md hover:opacity-60">
+            <p className="font-bold ">
               View more of my projects
-            </p>{" "}
-            <ArrowUpRightIcon className="h-10" />
+            </p>
+            <ArrowUpRightIcon className="ml-2 h-8" />
           </div>
         </Link>
       </div>

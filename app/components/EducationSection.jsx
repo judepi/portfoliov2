@@ -3,7 +3,7 @@ import React from 'react'
 const Education = () => {
   return (
     <section id="education" className="mt-10  flex flex-col justify-around">
-      <div className=" sticky border font-bold text-base md:text-xl text-center">
+      <div className=" sticky  font-bold text-base md:text-xl text-center">
         Education
       </div>
 
