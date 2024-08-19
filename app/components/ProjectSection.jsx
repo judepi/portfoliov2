@@ -1,7 +1,8 @@
-"use client"
-import React from 'react'
-import ProjectCard from "./ProjectCard"
-
+"use client";
+import React from "react";
+import ProjectCard from "./ProjectCard";
+import ArrowUpRightIcon from "@heroicons/react/24/outline/ArrowUpRightIcon";
+import Link from "next/link"
 const projectsData = [
   {
     id: 1,
@@ -97,20 +98,31 @@ const projectsData = [
 ];
 const ProjectSection = () => {
   return (
-    <section className="mt-10 lg:mt-24 min-h-screen">
+    <section className="mt-10 lg:mt-24 min-h-screen" id="projects">
+      <div className=" sticky font-bold text-base md:text-xl text-center">
+        Projects
+      </div>
+
       <div className="lg:hidden border border-b-black" />
       <div className="w-full">
         <ul className="flex flex-col w-full">
-            {
-                projectsData.map((project, index)=>(
-                <ProjectCard project={project}/>
-                ))
-            }
-    
+          {projectsData.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </ul>
+      </div>
+      <div className="flex justify-center mt-8 rounded-md">
+        <Link href="/projects/" target="_blank">
+          <div className="w-fit flex flex-row  p-4 items-end bg-slate-800 rounded-md hover:opacity-60">
+            <p className="font-bold ">
+              View more of my projects
+            </p>
+            <ArrowUpRightIcon className="ml-2 h-8" />
+          </div>
+        </Link>
       </div>
     </section>
   );
-}
+};
 
-export default ProjectSection
+export default ProjectSection;
