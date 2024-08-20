@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Body from "./components/Body"
 export default function Home() {
   return (
-    <div className="min-h-screen grid lg:grid-cols-2 bg-slate-600  p-10  lg:py-24 overflow-hidden  text-white">
+    <div className="min-h-screen grid lg:grid-cols-2 bg-[#202124]  p-10  lg:py-24 overflow-hidden  text-white">
       <Navbar />
       <main>
         <Body />

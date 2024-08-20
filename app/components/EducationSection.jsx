@@ -3,7 +3,7 @@ import React from 'react'
 const Education = () => {
   return (
     <section id="education" className="mt-10  flex flex-col justify-around">
-      <div className=" sticky  font-bold text-base md:text-xl text-center">
+      <div className="font-bold text-base md:text-xl text-center lg:text-start mb-4">
         Education
       </div>
 
@@ -15,7 +15,7 @@ const Education = () => {
           class, and know enough to build full-stack applications. Some
           certificates I have earned online include:
         </p>
-        <div className="">TAB BUTTON TO DISPLAY COURSES HERE.</div>
+        {/* <div className="">TAB BUTTON TO DISPLAY COURSES HERE.</div> */}
       </div>
     </section>
   );
