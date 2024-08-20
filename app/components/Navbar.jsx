@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, {useState, useRef} from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
@@ -30,6 +30,10 @@ const socials = [
 ];
 
 const Navbar = () => {
+  const [isSelected, setIsSelected] = useState(null)
+
+
+  
   return (
     <section className="lg:min-h-screen lg:w-full mb-16 lg:mb-0 lg:ml-20">
       <div className="lg:fixed lg:w-1/4 lg:min-h-screen ">
@@ -58,9 +62,16 @@ const Navbar = () => {
         <div className="hidden lg:flex mt-4 mb-28">
           <ul className="flex flex-col">
             {navItems.map((item, index) => (
-              <Link className="text-lg font-bold" key={index} href={item.link}>
-                {item.value}
-              </Link>
+              <li key={index} onClick={() => setIsSelected(index)}>
+                <Link
+                  href={item.link}
+                  className={`text-lg font-bold hover:text-primary-first ${
+                    isSelected === index ? "text-primary-first" : ""
+                  }`}
+                >
+                  <p>{item.value}</p>
+                </Link>
+              </li>
             ))}
           </ul>
         </div>

@@ -112,9 +112,7 @@ const ProjectSection = () => {
   const [hover, setHover] = useState(false)
   return (
     <section className="mt-10 lg:mt-24 min-h-screen" id="projects">
-      <div className="sticky font-bold text-base md:text-xl text-center lg:text-start text-primary-light">
-        Projects
-      </div>
+      <div className="sticky font-bold text-base md:text-xl">Projects</div>
 
       <div className="lg:hidden border border-b-black" />
       <div className="w-full">
@@ -127,18 +125,15 @@ const ProjectSection = () => {
       <MotionLink
         href="/projects/"
         target="_blank"
-        className="w-fit flex flex-row p-4 items-center bg-slate-800 rounded-md hover:opacity-60 mt-8"
+        className="w-fit flex flex-row items-center bg-[#2B2C30] text-primary-first px-3 py-2 rounded-md hover:opacity-60 mt-8"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 1.0 }}
         onMouseEnter={() => setHover(!hover)}
         onMouseLeave={() => setHover(!hover)}
       >
-        <p className="font-bold text-white">View more of my projects</p>
-        <motion.div
-          animate={{ scale: hover ? 1.15 : 1 }}
-          transition={{}}
-        >
-          <ArrowUpRightIcon className="ml-2 h-8 text-white" />
+        <p className="font-bold ">View more of my projects</p>
+        <motion.div animate={{ scale: hover ? 1.15 : 1 }} transition={{}}>
+          <ArrowUpRightIcon className="ml-2 h-8 " />
         </motion.div>
       </MotionLink>
     </section>

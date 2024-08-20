@@ -3,20 +3,21 @@ import Image from "next/image"
 const About = () => {
   return (
     <section className="flex flex-col mt-10 lg:mt-0" id="about">
-      <div className=" sticky font-bold text-base md:text-xl lg:text-start text-center text-primary-light mb-4">About</div>
+      <div className=" sticky font-bold text-base md:text-xl mb-4">About</div>
       <div className="">
         <p className="">
-          I have a passion and curiosity for learning new technologies, and
-          understanding how different software systems are designed. I am
-          currently focusing on the Internet of Things and learning full-stack
-          development. I am proficient in front-end technologies, but also
-          dabble in the backend side of systems as well. I gained my current
-          technical skills from school, and learning new technologies through
-          online courses.
+          I have a strong passion for learning new technologies and
+          understanding the design of various software systems. Currently, I am
+          focusing on the Internet of Things (IoT) and full-stack development.
+          While I am proficient in front-end technologies, I also have
+          experience with back-end systems, AI models, and APIs.
         </p>
-        <br/>
+        <br />
         <p>
-          During my free time I stream tech videos on youtube, catch up on the latest technology 
+          In my free time, I enjoy streaming tech videos on YouTube, staying
+          updated on the latest technology trends, and spending quality time
+          with friends and family. Occasionally, I unwind by playing Monster
+          Hunter.
         </p>
       </div>
     </section>
