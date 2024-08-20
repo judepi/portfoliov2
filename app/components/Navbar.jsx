@@ -24,7 +24,7 @@ const socials = [
   },
   {
     alt: "Youtube",
-    link: "/images/socials/Youtube.png",
+    link: "/images/socials/youtube.png",
     href: "https://www.youtube.com/channel/UCEEc1WDQhT0AMrJtjvr96ZA",
   },
 ];
@@ -35,19 +35,27 @@ const Navbar = () => {
       <div className="lg:fixed lg:w-1/4 lg:min-h-screen ">
         <div className="flex flex-col justify-between">
           <div className="flex flex-col mb-4">
-            <p className="text-xl md:text-2xl lg:text-4xl font-extrabold">
+            <p className="text-xl md:text-2xl lg:text-4xl font-extrabold ">
               Jude Pierre
             </p>
+            <p className="text-base md:text-xl font-extrabold mt-4">
+              Computer Science Student
+            </p>
             <p className="text-base md:text-xl font-extrabold">
-              Computer Science Student, & Aspiring Engineer
+              Aspiring Engineer
             </p>
           </div>
-          <p>
-           Interested in software engineering, system designing and the latest tech trends. My goal is to
-            become a software engineer by 2024
-          </p>
+          <div className="flex flex-row w-full text-pretty justify-center items-center mb-4">
+            <p className="">
+              Interested in software engineering, system designing and the
+              latest tech trends.
+              {/* latest tech trends. My goal is to become a software engineer by
+              2024 */}
+            </p>
+          </div>
         </div>
-        <div className="hidden lg:flex mt-10 mb-28">
+
+        <div className="hidden lg:flex mt-4 mb-28">
           <ul className="flex flex-col">
             {navItems.map((item, index) => (
               <Link className="text-lg font-bold" key={index} href={item.link}>

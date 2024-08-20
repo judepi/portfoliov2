@@ -1,10 +1,29 @@
-"use client"
-import React from 'react'
-import ProjectCard from "./ProjectCard"
+"use client";
+import React, {useState} from "react";
+import ProjectCard from "./ProjectCard";
+import ArrowUpRightIcon from "@heroicons/react/24/outline/ArrowUpRightIcon";
+import {motion} from "framer-motion"
+import Link from "next/link"
+import { Button } from "@nextui-org/react";
+
+const MotionLink = motion(Link)
 
 const projectsData = [
   {
     id: 1,
+    title: "Headstarter Hackathon | YC Spend Ruby | Complaint System",
+    description:
+      "A full-stack application that models a finance institution's complaint system.",
+    detailedDescription: "",
+    image: "/images/projects/spend_ruby.png",
+    gitUrl:"https://github.com/jpntc/Headstarter-Hackathon_2-BankComplaintSystem",
+    tag: ["All", "Web"],
+    skills: ["Node.js", "Next.js", "PostgreSQL", "Firebase", "React"],
+    liveUrl: "https://www.youtube.com/watch?v=Gtu27qSc0kM",
+    styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
+  },
+  {
+    id: 2,
     title: "Connect-Tags",
     description:
       "A WIP full-stack app developed with React-Native, Flask, and FireBase.",
@@ -13,13 +32,12 @@ const projectsData = [
     image: "/images/projects/Connect-Tags.jpeg",
     gitUrl: "https://github.com/jpntc/wafflehacks-2024-Connect-Tags",
     tag: ["All", "Web"],
-    demo: "https://www.youtube.com/embed/3ma1kaWPtUU?si=QlKLmeqpveUyY0Gc",
     skills: ["Node.js", "Next.js", "AWS Amplify", "REST APIs"],
-    liveUrl: "",
+    liveUrl: "w",
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
-    id: 2,
+    id: 3,
     title: "Image Generator",
     description:
       "A web app that integrates the DALL-E 3 API to generate images from user input, along with interactive components to adjust the images created to match what is desired in mind.",
@@ -27,13 +45,12 @@ const projectsData = [
     image: "/images/projects/demo_coming_soon.png",
     gitUrl: "",
     tag: ["All", "Web"],
-    demo: "",
     skills: ["Node.js", "Next.js", "AWS Amplify", "APIs"],
     liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 3,
+    id: 4,
     title: "Game Hub",
     description:
       "A game browsing web app that uses RAWG's API and filters that gives power to browse hundreds of games.",
@@ -41,13 +58,12 @@ const projectsData = [
     image: "/images/projects/demo_coming_soon.png",
     gitUrl: "https://github.com/jpntc/Game-Hub",
     tag: ["All", "Web"],
-    demo: "",
     skills: ["Node.js", "React.js", "APIs"],
     liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 4,
+    id: 5,
     title: "Portfolio",
     description:
       "A portfolio to show the track record of my journey in programming and software engineering. ",
@@ -56,7 +72,6 @@ const projectsData = [
     image: "/images/projects/portfolio.png",
     gitUrl: "https://github.com/jpntc/Portfolio",
     tag: ["All", "Web"],
-    demo: "",
     skills: ["Node.js", "Next.js", "AWS Amplify", "APIs"],
     liveUrl: "",
     styles: {
@@ -64,7 +79,7 @@ const projectsData = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: "Inventory Management System",
     description:
       "An inventory system that offers CRUD operations to simulate a real-world system used by commerce businesses.",
@@ -74,13 +89,12 @@ const projectsData = [
     gitUrl:
       "https://github.com/jpntc/CSCI-370-Projects/tree/main/Inventory%20Management%20Simulation",
     tag: ["All", "CL"],
-    demo: "",
     skills: ["Java", "OOP", "System Designing"],
     liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 6,
+    id: 7,
     title: "URL Parser",
     description:
       "A URL parsing program that takes in URLs that point to different web pages and extracts the information they contain.",
@@ -89,28 +103,46 @@ const projectsData = [
     image: "/images/projects/demo_coming_soon.png",
     gitUrl: "https://github.com/jpntc/CSCI-370-Projects/tree/main/URL_Parser",
     tag: ["All", "CL"],
-    demo: "",
     skills: ["Java", "OOP", "System Designing"],
     liveUrl: "",
     styles: { backgroundSize: "cover" },
   },
 ];
 const ProjectSection = () => {
+  const [hover, setHover] = useState(false)
   return (
-    <section className="mt-10 lg:mt-24 min-h-screen">
+    <section className="mt-10 lg:mt-24 min-h-screen" id="projects">
+      <div className="sticky font-bold text-base md:text-xl text-center lg:text-start text-primary-light">
+        Projects
+      </div>
+
       <div className="lg:hidden border border-b-black" />
       <div className="w-full">
         <ul className="flex flex-col w-full">
-            {
-                projectsData.map((project, index)=>(
-                <ProjectCard project={project}/>
-                ))
-            }
-    
+          {projectsData.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </ul>
       </div>
+      <MotionLink
+        href="/projects/"
+        target="_blank"
+        className="w-fit flex flex-row p-4 items-center bg-slate-800 rounded-md hover:opacity-60 mt-8"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 1.0 }}
+        onMouseEnter={() => setHover(!hover)}
+        onMouseLeave={() => setHover(!hover)}
+      >
+        <p className="font-bold text-white">View more of my projects</p>
+        <motion.div
+          animate={{ scale: hover ? 1.15 : 1 }}
+          transition={{}}
+        >
+          <ArrowUpRightIcon className="ml-2 h-8 text-white" />
+        </motion.div>
+      </MotionLink>
     </section>
   );
-}
+};
 
-export default ProjectSection
+export default ProjectSection;

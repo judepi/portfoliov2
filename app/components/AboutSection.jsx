@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Image from "next/image"
 const About = () => {
   return (
-    <section className="flex flex-col " id="about">
-      <div className="lg:hidden border border-b-black " />
+    <section className="flex flex-col mt-10 lg:mt-0" id="about">
+      <div className=" sticky font-bold text-base md:text-xl lg:text-start text-center text-primary-light mb-4">About</div>
       <div className="">
         <p className="">
           I have a passion and curiosity for learning new technologies, and
@@ -16,7 +16,7 @@ const About = () => {
         </p>
         <br/>
         <p>
-          During my free time I play video games, read about technology trends (AI trends, and other technological breakthroughs (nuclear fission, space, and biological research))
+          During my free time I stream tech videos on youtube, catch up on the latest technology 
         </p>
       </div>
     </section>
