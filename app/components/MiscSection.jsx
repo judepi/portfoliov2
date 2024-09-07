@@ -89,7 +89,7 @@ const MiscSection = () => {
 
           <MotionLink
             className="flex p-2 rounded-md  text-opacity text-center content-center items-center font-medium bg-[#2B2C30] text-primary-first px-3 py-2"
-            href="https://drive.google.com/file/d/1gOd0jqSXTKOVg1yK7t1N9MGnOl1BgkcS/view?usp=sharing"
+            href="https://drive.google.com/drive/folders/1co8vt_EQJ5wksnUPex_YLAPyzp1YlHUT?usp=sharing"
             target="_blank"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1.0 }}

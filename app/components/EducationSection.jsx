@@ -12,7 +12,6 @@ const Education = () => {
           coursework provided a solid foundation, I pursued web development
           independently and gained the skills needed to build full-stack
           applications. Additionally, I have grown my expertise in different tech domains through online resources such as courses and programs.
-          
         </p>
         {/* <div className="">TAB BUTTON TO DISPLAY COURSES HERE.</div> */}
       </div>
