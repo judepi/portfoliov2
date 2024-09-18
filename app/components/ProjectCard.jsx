@@ -10,7 +10,7 @@ const MotionLink = motion(Link);
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="flex flex-col-reverse md:flex-row bg-[#2B2C30] w-fit p-4 rounded-lg mt-4 h-fit">
+    <div className="flex flex-col-reverse md:flex-row bg-[#2B2C30] w-full p-4 rounded-lg mt-4 h-full">
       <Image
         src={project.image}
         width={130}
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
                 <MotionLink
                   href={project.gitUrl}
                   target="_blank"
-                  className=""
+                  className="rounded-full bg-primary-first p-0 m-0 w-fit h-fit"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
                 <MotionLink
                   href={project.liveUrl}
                   target="_blank"
-                  className="relative "
+                  className="relative text-primary-first"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
                 >
