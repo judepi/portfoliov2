@@ -103,7 +103,7 @@ const Navbar = () => {
                 alt={item.alt}
                 width={40}
                 height={40}
-                className="mr-2 bg-primary-first rounded-full"
+                className="mr-2 text-white border-white border bg-white rounded-full hover:bg-primary-second hover:border-primary-first"
               />
             </MotionLink>
           ))}

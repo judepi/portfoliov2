@@ -21,16 +21,16 @@ const ProjectCard = ({ project }) => {
 
       <div className="ml-4 flex flex-col justify-between ">
         <div>
-          <div className="flex justify-between">
-            <p className="text-base mb-2 font-bold flex flex-wrap">
+          <div className="flex w-full">
+            <p className="text-base mb-2 font-bold   w-[92%]">
               {project.title}
             </p>
-            <div className="flex w-1/4 justify-end content-start items-start ml-2 h-fit">
+            <div className="flex  justify-end ml-2 h-fit ">
               {project.gitUrl && (
                 <MotionLink
                   href={project.gitUrl}
                   target="_blank"
-                  className="rounded-full bg-primary-first p-0 m-0 w-fit h-fit"
+                  className="rounded-full bg-white border p-0 m-0 w-fit h-fit hover:bg-primary-second hover:border-primary-second"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
                 <MotionLink
                   href={project.liveUrl}
                   target="_blank"
-                  className="relative text-primary-first"
+                  className="relative text-white hover:text-primary-second"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
                 >
