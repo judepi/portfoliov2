@@ -14,7 +14,7 @@ const ProjectCard = ({ experience }) => {
         <p className="text-base lg:text-lg font-bold ">{experience.title}</p>
         <div className="flex text-base lg:text-md mb-2 font-bold">
           {experience.subtitle}
-          <p className="ml-2 md:hidden">{"| " + experience.date}</p>
+          <p className="ml-2 md:hidden">{experience.date}</p>
         </div>
         <p className="mb-2 w-fit text-sm">{experience.description}</p>
         <ul className="flex flex-wrap gap-2">

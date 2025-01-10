@@ -18,15 +18,15 @@ const experienceData = [
     description:
       "Accepted into a competitive program taught by industry and academic experts, focused on web development. I am learning and utilizing technologies such as PostgreSQL, Express.js, React.js, and Node.js, while also applying industry best practices, including MVC design, Git/GitHub version control, and Agile/Scrum methodologies.",
     date: "Aug-16 - Present",
-    skills: ["Programming", "PostgreSQL", "React", "Node.js", "Express.js"],
+    skills: ["Programming", "PostgreSQL", "React.js", "Next.js", "Node.js", "Express.js"],
   },
   {
     title: "Fellow",
     subtitle: "Headstarter",
     description:
-      "Accepted into a highly competitive software engineering program that provided a comprehensive introduction to the field, featuring live sessions led by industry professionals and engineers. Throughout the program, I built and deployed five projects utilizing in-demand web technologies and API services, showcasing my full-stack development skills. Additionally, I created and deployed a web application that generated significant user interest, with 50+ waitlisted users within just a few days of launch, demonstrating the impact and potential of the projects I worked on.",
-    date: "Aug-9 - Sep-9",
-    skills: [],
+      "Accepted into a highly competitive software engineering program that provided a comprehensive introduction to the field, featuring live sessions led by industry professionals and engineers. Throughout the program, I built and deployed five projects utilizing in-demand web technologies and API services, showcasing my fullstack development skills. Additionally, I created and deployed a web application that generated significant user interest, with 50+ waitlisted users within just a few days of launch, demonstrating the impact and potential of the projects I worked on.",
+    date: "Aug-9 - Sept-9",
+    skills: ["Programming", "React.js", "Next.js", "Node.js", "Python", "React Native"],
   },
   {
     title: "Prompt Evaluator",
