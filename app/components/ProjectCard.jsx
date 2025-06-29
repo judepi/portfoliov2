@@ -10,7 +10,7 @@ const MotionLink = motion(Link);
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="flex flex-col-reverse md:flex-row bg-[#2B2C30] w-fit p-4 rounded-lg mt-4 h-fit">
+    <div className="flex flex-col-reverse md:flex-row bg-[#2B2C30] w-full p-4 rounded-lg mt-4 h-full">
       <Image
         src={project.image}
         width={130}
@@ -21,16 +21,16 @@ const ProjectCard = ({ project }) => {
 
       <div className="ml-4 flex flex-col justify-between ">
         <div>
-          <div className="flex justify-between">
-            <p className="text-base mb-2 font-bold flex flex-wrap">
+          <div className="flex w-full">
+            <p className="text-base mb-2 font-bold   w-[92%]">
               {project.title}
             </p>
-            <div className="flex w-1/4 justify-end content-start items-start ml-2 h-fit">
+            <div className="flex  justify-end ml-2 h-fit ">
               {project.gitUrl && (
                 <MotionLink
                   href={project.gitUrl}
                   target="_blank"
-                  className=""
+                  className="rounded-full bg-white border p-0 m-0 w-fit h-fit hover:bg-primary-second hover:border-primary-second"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
                 <MotionLink
                   href={project.liveUrl}
                   target="_blank"
-                  className="relative "
+                  className="relative text-white hover:text-primary-second"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
                 >

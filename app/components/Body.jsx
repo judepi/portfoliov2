@@ -6,7 +6,7 @@ import ExperienceSection from "./ExperienceSection";
 import MiscSection from "./MiscSection"
 const Body = () => {
   return (
-    <section className="lg:w-3/4 min-h-screen  flex flex-col ">
+    <section className=" min-h-screen  flex flex-col lg:pl-16 lg:pr-10">
       <AboutSection />
       <EducationSection />
       <ProjectSection/>

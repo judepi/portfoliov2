@@ -38,33 +38,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Image Generator",
-    description:
-      "A web app that integrates the DALL-E 3 API to generate images from user input, along with interactive components to adjust the images created to match what is desired in mind.",
-    detailedDescription: "Detailed description here",
-    image: "/images/projects/demo_coming_soon.png",
-    gitUrl: "",
-    tag: ["All", "Web"],
-    skills: ["Node.js", "Next.js", "AWS Amplify", "APIs"],
-    liveUrl: "",
-    styles: { backgroundSize: "cover" },
-  },
-  {
-    id: 4,
-    title: "Game Hub",
-    description:
-      "A game browsing web app that uses RAWG's API and filters that gives power to browse hundreds of games.",
-    detailedDescription: "Detailed description here",
-    image: "/images/projects/demo_coming_soon.png",
-    gitUrl: "https://github.com/jpntc/Game-Hub",
-    tag: ["All", "Web"],
-    skills: ["Node.js", "React.js", "APIs"],
-    liveUrl: "",
-    styles: { backgroundSize: "cover" },
-  },
-  {
-    id: 5,
-    title: "Portfolio",
+    title: "Portfolio 1.0",
     description:
       "A portfolio to show the track record of my journey in programming and software engineering. ",
     detailedDescription:
@@ -79,7 +53,7 @@ const projectsData = [
     },
   },
   {
-    id: 6,
+    id: 4,
     title: "Inventory Management System",
     description:
       "An inventory system that offers CRUD operations to simulate a real-world system used by commerce businesses.",
@@ -94,7 +68,7 @@ const projectsData = [
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 7,
+    id: 5,
     title: "URL Parser",
     description:
       "A URL parsing program that takes in URLs that point to different web pages and extracts the information they contain.",
@@ -112,33 +86,28 @@ const ProjectSection = () => {
   const [hover, setHover] = useState(false)
   return (
     <section className="mt-10 lg:mt-24 min-h-screen" id="projects">
-      <div className="sticky font-bold text-base md:text-xl text-center lg:text-start text-primary-light">
-        Projects
-      </div>
+      <div className="sticky font-bold text-base md:text-xl">Projects</div>
 
       <div className="lg:hidden border border-b-black" />
       <div className="w-full">
         <ul className="flex flex-col w-full">
           {projectsData.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </ul>
       </div>
       <MotionLink
         href="/projects/"
         target="_blank"
-        className="w-fit flex flex-row p-4 items-center bg-slate-800 rounded-md hover:opacity-60 mt-8"
+        className="w-fit flex flex-row items-center bg-[#2B2C30] text-primary-first px-3 py-2 rounded-md hover:opacity-60 mt-8"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 1.0 }}
         onMouseEnter={() => setHover(!hover)}
         onMouseLeave={() => setHover(!hover)}
       >
-        <p className="font-bold text-white">View more of my projects</p>
-        <motion.div
-          animate={{ scale: hover ? 1.15 : 1 }}
-          transition={{}}
-        >
-          <ArrowUpRightIcon className="ml-2 h-8 text-white" />
+        <p className="font-bold ">View more of my projects</p>
+        <motion.div animate={{ scale: hover ? 1.15 : 1 }} transition={{}}>
+          <ArrowUpRightIcon className="ml-2 h-8 " />
         </motion.div>
       </MotionLink>
     </section>
