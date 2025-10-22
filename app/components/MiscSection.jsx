@@ -12,17 +12,15 @@ const proTechSkills = {
   header: "Proefficient",
   skills: [
     "Python",
-    "Node",
-    "Java",
+    "Javascript",
     "Next.js & React",
-    "PostgreSQL",
-    "RDM",
     "HTML/CSS/Tailwind CSS",
+    "React Native",
   ],
 };
 const intermediateTechSkills = {
   header: "Intermediate",
-  skills: ["C++", "C", "TypeScript", "React Native"],
+  skills: ["C++", "C", "PostgreSQL", "RDM",  "Java",],
 };
 const beginnerTechSkills = {
   header: "Beginner",
@@ -32,8 +30,6 @@ const softSkills = {
   header: "Soft Skills",
   skills: [
     "Teamwork & collaboration",
-    "Constructive criticism",
-    "Passion to learn",
     "Time management",
     "Resourcefulness",
   ],
