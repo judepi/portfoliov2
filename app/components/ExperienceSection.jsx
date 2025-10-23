@@ -8,7 +8,7 @@ const experienceData = [
     title: "Developer | Fellow",
     subtitle: "SCIP",
     description:
-      "Collaborated with a team of 3 to develop a website and mobile app for SCIP, expanding employer and student engagement; conducted Alpha/Beta testing, iterated on feedback, and designed the website landing page. Lead a team of 4 high school students to develop and deploy a mobile app using React Native, Node.js, and Firebase",
+     "Lead a team of 4 to develop a mobile app using React Native and Firebase. Built out different features such as notifications, multi language, and a chat system.",
     date: "Sep-24 - Present",
     skills: ["Programming", "React Native", "Node.js", "UI/UX Design", "WIX"],
   },
