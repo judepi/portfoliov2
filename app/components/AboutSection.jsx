@@ -8,9 +8,9 @@ const About = () => {
         <p className="">
           I have a strong passion for learning new technologies and
           understanding the design of various software systems. Currently, I am
-          focusing on the Internet of Things (IoT) and full-stack development.
-          While I am proficient in front-end technologies, I also have
-          experience with back-end systems, AI models, and APIs.
+          focusing on the Internet of Things (IoT) and full-stack development (web & mobile). I
+          am proficient in both front-end and back-end development, with
+          experience building full-stack applications and working with machine learning models.
         </p>
         <br />
         <p>

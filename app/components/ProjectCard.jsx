@@ -10,13 +10,13 @@ const MotionLink = motion(Link);
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="flex flex-col-reverse md:flex-row bg-[#2B2C30] w-full p-4 rounded-lg mt-4 h-full">
+    <div className="flex flex-col-reverse md:flex-row bg-[#2B2C30] w-full  rounded-lg mt-4">
       <Image
         src={project.image}
         width={130}
         height={100}
         alt="project image"
-        className="ml-4 md:ml-0 max-h-40 rounded-md"
+        className="max-h-44 min-h-44  min-w-40 rounded-md"
       />
 
       <div className="ml-4 flex flex-col justify-between ">

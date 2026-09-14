@@ -64,7 +64,7 @@ const Navbar = () => {
             Aspiring Engineer
           </p>
         </div>
-        <div className="flex flex-row w-full text-pretty justify-center items-center mb-4">
+        <div className="flex flex-row  text-pretty  mb-4  w-[80%]">
           <p>
             Interested in software engineering, system designing, and the latest
             tech trends.
