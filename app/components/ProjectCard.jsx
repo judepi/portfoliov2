@@ -16,16 +16,15 @@ const ProjectCard = ({ project }) => {
         width={130}
         height={100}
         alt="project image"
-        className="max-h-44 min-h-44  min-w-40 rounded-md"
+        className="max-h-56 min-h-44  min-w-40 rounded-md"
       />
-
-      <div className="ml-4 flex flex-col justify-between ">
+      <div className="ml-4 flex flex-col justify-between">
         <div>
           <div className="flex w-full">
-            <p className="text-base mb-2 font-bold   w-[92%]">
+            <p className="text-base mb-3 font-bold   w-[92%]">
               {project.title}
             </p>
-            <div className="flex  justify-end ml-2 h-fit ">
+            <div className="flex  justify-end ml-2 h-fit">
               {project.gitUrl && (
                 <MotionLink
                   href={project.gitUrl}
