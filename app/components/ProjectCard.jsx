@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
         alt="project image"
         className="max-h-56 min-h-44  min-w-40 rounded-md"
       />
-      <div className="ml-4 flex flex-col justify-between">
+      <div className="md:ml-4 flex flex-col justify-between">
         <div>
           <div className="flex w-full">
             <p className="text-base mb-3 font-bold   w-[92%]">

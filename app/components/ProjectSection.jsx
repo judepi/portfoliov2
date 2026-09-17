@@ -125,7 +125,7 @@ const ProjectSection = () => {
     <section className="mt-10 lg:mt-24 min-h-screen" id="projects">
       <div className="sticky font-bold text-base md:text-xl">Projects</div>
 
-      <div className="lg:hidden border border-b-black" />
+      <div className="lg:hidden border border-b-white"/>
       <div className="w-full">
         <ul className="flex flex-col w-full">
           {projectsData.map((project, index) => (
@@ -136,7 +136,7 @@ const ProjectSection = () => {
       <MotionLink
         href="/projects/"
         target="_blank"
-        className="w-fit flex flex-row items-center bg-[#2B2C30] text-primary-first px-3 py-2 rounded-md hover:opacity-60 mt-8"
+        className="w-fit flex flex-row items-center bg-[#2B2C30] text-primary-first lg:px-3 py-2 rounded-md hover:opacity-60 mt-8"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 1.0 }}
         onMouseEnter={() => setHover(!hover)}

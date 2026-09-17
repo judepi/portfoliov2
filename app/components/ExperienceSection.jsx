@@ -10,7 +10,7 @@ const experienceData = [
     description:
      "Lad two teams of 4 to develop a mobile app using React Native, JavaScript, and Firebase. Built out different features such as notifications, multi language, and a chat system.",
     date: "Sep 2024 - Aug 2025",
-    skills: ["Programming", "React Native", "Node.js", "UI/UX Design", "WIX"],
+    skills: ["Programming", "React Native", "Node.js", "UI/UX Design"],
   },
   {
     title: "Software Engineering Fellow",

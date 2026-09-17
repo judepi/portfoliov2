@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const ProjectCard = ({ experience }) => {
   return (
-    <div className="flex flex-col md:flex-row  bg-[#2B2C30]  w-full p-2 rounded-lg mt-4 h-full">
+    <div className="flex flex-col md:flex-row  bg-[#2B2C30]  w-full md:p-2 rounded-lg mt-4 h-full">
       <p className="hidden md:flex w-fit text-nowrap text-xs">
         {experience.date}
       </p>
-      <div className="ml-4 flex flex-col mr-2">
+      <div className="md:ml-4 flex flex-col mr-2">
         <p className="text-base lg:text-lg font-bold ">{experience.title}</p>
         <div className="flex text-base lg:text-md mb-2 font-bold">
           {experience.subtitle}

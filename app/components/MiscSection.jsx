@@ -13,8 +13,11 @@ const proTechSkills = {
   skills: [
     "Python",
     "Javascript",
-    "Next.js & React",
-    "HTML/CSS/Tailwind CSS",
+    "React.js",
+    "Next.js",
+    "HTML",
+    "CSS",
+    "Tailwind & Nativewind",
     "React Native",
   ],
 };
