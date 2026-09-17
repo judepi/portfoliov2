@@ -46,7 +46,7 @@ const projectsData = [
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
-    id: 2,
+    id: 3,
     title: "Headstarter Hackathon | Complaint System",
     description:
       "A full-stack application that models a finance institution's complaint system.",
@@ -60,7 +60,7 @@ const projectsData = [
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
-    id: 3,
+    id: 4,
     title: "Connect-Tags",
     description:
       "A WIP full-stack app developed with React-Native, Flask, and FireBase.",
@@ -74,7 +74,7 @@ const projectsData = [
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
-    id: 3,
+    id: 5,
     title: "Portfolio 1.0",
     description:
       "First portfolio that showed the track record of my journey in the software engineering field. ",
@@ -90,7 +90,7 @@ const projectsData = [
     },
   },
   {
-    id: 4,
+    id: 6,
     title: "Inventory Management System",
     description:
       "An inventory system that offers CRUD operations to simulate a real-world system used by commerce businesses.",
@@ -105,7 +105,7 @@ const projectsData = [
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 5,
+    id: 7,
     title: "URL Parser",
     description:
       "A URL parsing program that takes in URLs that point to different web pages and extracts the information they contain.",
