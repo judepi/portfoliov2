@@ -11,19 +11,56 @@ const MotionLink = motion(Link)
 const projectsData = [
   {
     id: 1,
-    title: "Headstarter Hackathon | YC Spend Ruby | Complaint System",
+    title: "Image Classification Model (Machine Learning)",
+    description:
+      "A machine learning model built and trained to classify sets of images such as bridges, forests, glaciers, mountains, seas, and streets",
+    detailedDescription: "",
+    image: "/images/projects/demo_coming_soon.png",
+    gitUrl: "https://github.com/judepi/image-classification-ml",
+    tag: ["All", "Web"],
+    skills: [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "EfficientNet",
+      "Scikit-learn",
+      "NumPy",
+      "Streamlit",
+    ],
+    liveUrl: "",
+    styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
+  },
+  {
+    id: 2,
+    title: "Soulful Stray",
+    description:
+      "A stress relief web room built to let the user relax, listen to music, and write and plan about their day there.",
+    detailedDescription: "",
+    image: "/images/projects/demo_coming_soon.png",
+    gitUrl: "https://github.com/judepi/image-classification-ml",
+    tag: ["All", "Web"],
+    skills: [
+      "React.js", "Express.js","Node.js", "SQL"
+    ],
+    liveUrl: "",
+    styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
+  },
+  {
+    id: 3,
+    title: "Headstarter Hackathon | Complaint System",
     description:
       "A full-stack application that models a finance institution's complaint system.",
     detailedDescription: "",
     image: "/images/projects/spend_ruby.png",
-    gitUrl:"https://github.com/jpntc/Headstarter-Hackathon_2-BankComplaintSystem",
+    gitUrl:
+      "https://github.com/jpntc/Headstarter-Hackathon_2-BankComplaintSystem",
     tag: ["All", "Web"],
     skills: ["Node.js", "Next.js", "PostgreSQL", "Firebase", "React"],
     liveUrl: "https://www.youtube.com/watch?v=Gtu27qSc0kM",
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
-    id: 2,
+    id: 4,
     title: "Connect-Tags",
     description:
       "A WIP full-stack app developed with React-Native, Flask, and FireBase.",
@@ -37,10 +74,10 @@ const projectsData = [
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
-    id: 3,
+    id: 5,
     title: "Portfolio 1.0",
     description:
-      "A portfolio to show the track record of my journey in programming and software engineering. ",
+      "First portfolio that showed the track record of my journey in the software engineering field. ",
     detailedDescription:
       "A portfolio web application developed with Next.js and Tailwind CSS to share information about myself and my journey. The project leverages the strengths of React and the component-based software engineering approach it offers which is popular in today's web development industry. I Created 6 components for the 6 different page sections, from the Navbar to the Footer and other children components for important functionalities. The libraries I used for the animations are React's Framer Motion, Type-Animation, and Animated Numbers. I attempted a dynamic code approach when necessary for generating site information, to make the codebase small and readable. RESEND was used for sending emails. AWS was used for deployment.",
     image: "/images/projects/portfolio.png",
@@ -53,7 +90,7 @@ const projectsData = [
     },
   },
   {
-    id: 4,
+    id: 6,
     title: "Inventory Management System",
     description:
       "An inventory system that offers CRUD operations to simulate a real-world system used by commerce businesses.",
@@ -68,7 +105,7 @@ const projectsData = [
     styles: { backgroundSize: "cover" },
   },
   {
-    id: 5,
+    id: 7,
     title: "URL Parser",
     description:
       "A URL parsing program that takes in URLs that point to different web pages and extracts the information they contain.",
