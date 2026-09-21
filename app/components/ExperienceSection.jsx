@@ -40,9 +40,8 @@ const experienceData = [
 const ExperienceSection = () => {
   return (
     <section className="mt-10 lg:mt-24 min-h-screen" id="experience">
-      <div className=" sticky font-bold text-base md:text-xl">
-        Experience
-      </div>
+      <div className=" sticky font-bold text-base md:text-xl">Experience</div>
+      <div className="lg:hidden border border-b-white" />
       <div className="w-full">
         <ul className="flex flex-col w-full">
           {experienceData.map((experience, index) => (

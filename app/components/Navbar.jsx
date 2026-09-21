@@ -58,7 +58,7 @@ const Navbar = () => {
             Jude Pierre
           </p>
           <p className="text-base md:text-xl font-extrabold mt-4">
-            Computer Science Student
+            Computer Science Graduate
           </p>
           <p className="text-base md:text-xl font-extrabold">
             Aspiring Engineer
@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
         <div className="flex flex-row  text-pretty  mb-4  w-[80%]">
           <p>
-            Interested in software engineering, system designing, and the latest
+            Interested in software engineering, system designing, AI & ML, and the latest
             tech trends.
           </p>
         </div>
