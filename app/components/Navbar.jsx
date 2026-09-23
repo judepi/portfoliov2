@@ -51,7 +51,7 @@ const Navbar = () => {
   }, [isSelected]);
 
   return (
-    <div className="h-fit lg:fixed">
+    <div className="h-fit lg:fixed w-[50%]">
       <div className="flex flex-col justify-between">
         <div className="flex flex-col mb-4">
           <p className="text-xl md:text-2xl lg:text-4xl font-extrabold">
@@ -64,10 +64,10 @@ const Navbar = () => {
             Aspiring Engineer
           </p>
         </div>
-        <div className="flex flex-row  text-pretty  mb-4  w-[80%]">
-          <p>
-            Interested in software engineering, system designing, AI & ML, and the latest
-            tech trends.
+        <div className="flex flex-row  text-pretty  mb-4  w-[80%] ">
+          <p className="w-full ">
+            Interested in software engineering, system designing, artificial
+            intelligence & machine learning, and the latest tech trends.
           </p>
         </div>
       </div>
