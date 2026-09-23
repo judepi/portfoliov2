@@ -68,7 +68,7 @@ const projectsData = [
     gitUrl: "https://github.com/jpntc/wafflehacks-2024-Connect-Tags",
     tag: ["All", "Web"],
     skills: ["Node.js", "Next.js", "AWS Amplify", "REST APIs"],
-    liveUrl: "w",
+    liveUrl: "",
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
   {
