@@ -65,7 +65,7 @@ const Navbar = () => {
           </p>
         </div>
         <div className="flex flex-row  text-pretty  mb-4  w-[80%] ">
-          <p className="w-full ">
+          <p className="">
             Interested in software engineering, system designing, artificial
             intelligence & machine learning, and the latest tech trends.
           </p>
