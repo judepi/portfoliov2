@@ -39,9 +39,7 @@ const projectsData = [
     image: "/images/projects/demo_coming_soon.png",
     gitUrl: "https://github.com/judepi/image-classification-ml",
     tag: ["All", "Web"],
-    skills: [
-      "React.js", "Express.js","Node.js", "SQL"
-    ],
+    skills: ["React.js", "Express.js", "Node.js", "SQL"],
     liveUrl: "",
     styles: { backgroundSize: "cover", width: "100%", overflow: "hidden" },
   },
@@ -61,7 +59,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Connect-Tags",
+    title: "Headstarter Hackathon | Connect-Tags",
     description:
       "A WIP full-stack app developed with React-Native, Flask, and FireBase.",
     detailedDescription:
